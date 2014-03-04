@@ -2,8 +2,7 @@ package com.makingdevs
 
 enum QuestionType {
 
-  COMPUESTA_SI_NO("question.type.compuesta"),
-  COMPUESTA_MULTIPLE("question.type.compuesta"),
+  CON_CALIFICACION("question.type.con_calificacion"),
   SIN_CALIFICACION("question.type.sin_calificacion"),
   ABIERTA("question.type.abierta")
 

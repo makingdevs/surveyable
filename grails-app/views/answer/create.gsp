@@ -10,13 +10,10 @@
     <h1>Captura respuesta para "${question.description}"</h1>
     <div class="row-fluid">
       <div class="span6">
-        <g:if test="${question.questionType == QuestionType.COMPUESTA_SI_NO}">
+        <g:if test="${question.questionType == QuestionType.SIN_CALIFICACION}">
           <g:form name="answer1Form" action="agregar">
             <label>¿Cual es la respuesta?:</label>
-            <select name="description">
-              <option value="false">False</option>
-              <option value="true">True</option>
-            </select>
+            <textarea class="field span12" rows="4" name="description"></textarea>
             <input type="hidden" value="${question.id}" name="question" />
             <br>
             <input class="btn btn-primary" type="submit" value="Enviar" />

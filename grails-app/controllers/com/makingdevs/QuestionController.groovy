@@ -9,7 +9,7 @@ class QuestionController {
     if(pregunta.save(flush:true)){
       redirect action:"show", id:pregunta.id
     }else{
-      render view:"create"
+      render view:"index"
     }
   }
 

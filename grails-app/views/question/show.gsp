@@ -21,14 +21,10 @@
           </g:each>
         </g:if>
 
-        <g:if test="${question.questionType == QuestionType.SIN_CALIFICACION || question.questionType == QuestionType.COMPUESTA_MULTIPLE}">
+        <g:if test="${question.questionType == QuestionType.SIN_CALIFICACION || question.questionType == QuestionType.CON_CALIFICACION}">
           <g:link class="btn btn-primary" controller="answer" action="create" id="${question.id}">Agregar respuestas</g:link>
         </g:if>
         
-        <g:if test="${question.questionType == QuestionType.COMPUESTA_SI_NO && question.answers.size() < 2}">
-          <g:link class="btn btn-primary" controller="answer" action="create" id="${question.id}">Agregar respuestas</g:link>
-        </g:if>
-
         <g:link class="btn btn-primary"  action="index">Crear otra Pregunta</g:link>
       </div>
     </div>

@@ -1,5 +1,4 @@
 <%@ page import="com.makingdevs.QuestionType"%>
-<%@ page import="com.makingdevs.AnswerType"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +10,13 @@
     <h1>Captura respuesta para "${question.description}"</h1>
     <div class="row-fluid">
       <div class="span6">
-        <g:if test="${question.questionType == QuestionType.TRUE_FALSE}">
+        <g:if test="${question.questionType == QuestionType.COMPUESTA_SI_NO}">
           <g:form name="answer1Form" action="agregar">
             <label>¿Cual es la respuesta?:</label>
             <select name="description">
               <option value="false">False</option>
               <option value="true">True</option>
             </select>
-            <label>Tipo de respuesta:</label>
-            <g:select name="answerType" from="${AnswerType.values()}"/> 
             <input type="hidden" value="${question.id}" name="question" />
             <br>
             <input class="btn btn-primary" type="submit" value="Enviar" />

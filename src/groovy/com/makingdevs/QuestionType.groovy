@@ -2,10 +2,10 @@ package com.makingdevs
 
 enum QuestionType {
 
-  OPEN("question.type.open"),
-  MULTIPLE_CHOICE ("question.type.multiple_choice"),
-  TRUE_FALSE("question.type.true_false"),
-  MULTIPLE_RESPONSE("question.type.multiple_response")
+  COMPUESTA_SI_NO("question.type.compuesta"),
+  COMPUESTA_MULTIPLE("question.type.compuesta"),
+  SIN_CALIFICACION("question.type.sin_calificacion"),
+  ABIERTA("question.type.abierta")
 
   private final String code
 

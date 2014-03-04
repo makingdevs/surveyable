@@ -20,12 +20,15 @@
           </ul>
           </g:each>
         </g:if>
-        <g:if test="${question.questionType == QuestionType.MULTIPLE_CHOICE || question.questionType == QuestionType.MULTIPLE_RESPONSE}">
+
+        <g:if test="${question.questionType == QuestionType.SIN_CALIFICACION || question.questionType == QuestionType.COMPUESTA_MULTIPLE}">
           <g:link class="btn btn-primary" controller="answer" action="create" id="${question.id}">Agregar respuestas</g:link>
         </g:if>
-        <g:if test="${question.questionType == QuestionType.TRUE_FALSE && question.answers.size() < 2}">
+        
+        <g:if test="${question.questionType == QuestionType.COMPUESTA_SI_NO && question.answers.size() < 2}">
           <g:link class="btn btn-primary" controller="answer" action="create" id="${question.id}">Agregar respuestas</g:link>
         </g:if>
+
         <g:link class="btn btn-primary"  action="index">Crear otra Pregunta</g:link>
       </div>
     </div>

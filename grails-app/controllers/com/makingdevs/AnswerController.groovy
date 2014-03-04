@@ -8,7 +8,6 @@ class AnswerController {
     }
 
     def agregar(){
-      println params
       def question = Question.get(params.question)
       def answer = new Answer(description:params.description, answerType:params.answerType)
       question.addToAnswers(answer)

@@ -4,7 +4,6 @@ package com.makingdevs
 class Answer implements Comparable{
 
   String description
-  AnswerType answerType 
 
   static constraints = {
     description blank:false, size:1..1000

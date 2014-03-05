@@ -10,7 +10,7 @@ class QuestionController {
     if(params.from&&params.to){
     pregunta = new Question(description:params.description,
                                 questionType:params.questionType,
-                                satisfaccion:new IntRange(params.from.toInteger(),params.to.toInteger()))
+                                satisfaccion:params.from.toInteger()..params.to.toInteger())
     }else{
     pregunta = new Question(params)
   }

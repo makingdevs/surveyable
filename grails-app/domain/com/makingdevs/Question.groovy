@@ -5,14 +5,14 @@ class Question implements Comparable {
 
   String description
   QuestionType questionType
-  IntRange satisfaccion
+  List satisfaccion
 
   static constraints = {
     description blank:false, size:1..1000
-    satisfaccion nullable: true
   }
 
-  static hasMany = [answers : Answer]
+  static hasMany = [answers : Answer,
+  satisfaccion:Integer]
 
   int compareTo(q){
     this.id <=> q.id

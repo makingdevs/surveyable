@@ -18,7 +18,6 @@
         <div class="span6" id="satisfaccion">
           <label>QuestionType</label>
           <g:select name="questionType" from="${QuestionType.values()}"/>
-          
         </div>
         <div class="span12">
           <input class="btn btn-primary" type="submit" value="Enviar" />
@@ -29,7 +28,7 @@
   <script>
   $( "#questionType" ).change(function() {
     if($("#questionType option:selected").text()=="CON_CALIFICACION"){
-      $( "<br><input type='text' name='satisfaccion'>" ).appendTo( '#satisfaccion' );
+      $( "<br><label>Rango de Calificacion</label><input type='text' name='from'><input type='text' name='to'><br>" ).appendTo( '#satisfaccion');
     }
   });
   </script>

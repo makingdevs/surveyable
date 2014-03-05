@@ -1,9 +1,9 @@
 package com.makingdevs
 
 enum QuestionType {
-
-  CON_CALIFICACION("question.type.con_calificacion"),
+  
   SIN_CALIFICACION("question.type.sin_calificacion"),
+  CON_CALIFICACION("question.type.con_calificacion"),
   ABIERTA("question.type.abierta")
 
   private final String code

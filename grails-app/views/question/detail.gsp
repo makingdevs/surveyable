@@ -1,3 +1,4 @@
+<%@ page import="com.makingdevs.QuestionType"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +19,14 @@
           <dd>
             <ul>
             <g:each in="${question?.answers}" var="respuestas" status="i">
-              <li>${respuestas.description} -- ${respuestas.solution}</li>
+              <li>${respuestas.description}</li>
             </g:each> 
             </ul>
           </dd>
+          <g:if test="${question.questionType == QuestionType.CON_CALIFICACION}">
+            <dt>Rango de Satisfacción</dt>
+            <dd>${question.satisfaccion[0]} al ${question.satisfaccion.last()}</dd>
+          </g:if>
         </dl>
       </div>
     </div>

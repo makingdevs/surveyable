@@ -4,6 +4,7 @@
 <head>
   <meta name="layout" content="bootstrap"/>
   <title>Create question</title>
+  <g:javascript library="jquery" plugin="jquery"/>
 </head>
 <body>
   <div class="container">
@@ -24,5 +25,10 @@
       </g:form>
     </div>
   </div>
+  <script>
+  $( "#questionType" ).change(function() {
+    alert( "Handler for .change() called." );
+  });
+  </script>
 </body>
 </html>

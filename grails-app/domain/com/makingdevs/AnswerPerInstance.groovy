@@ -11,7 +11,7 @@ class AnswerPerInstance {
 
   static hasMany = [answerPerUsers:AnswerPerUser,
                     openAnswerPerUsers:OpenAnswerPerUser,
-                    rangeAnswerPerUser:RangeAnswerPerUser]
+                    rangeAnswerPerUsers:RangeAnswerPerUser]
 
   static constraints = {
   }

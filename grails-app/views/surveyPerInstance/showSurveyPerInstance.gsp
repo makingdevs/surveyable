@@ -7,7 +7,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>${surveyPerInstance}</h1>
+    <h1>${surveyPerInstance.survey}</h1>
+
+
   </div>
 </body>
 </html>

@@ -49,11 +49,12 @@ class SurveyPerInstanceController {
     for (int i = 0; i < params.numPreguntas.toLong(); i++) {
       surveyPerInstanceService.addAnswer(idPregunta.getAt(i),respuestas.getAt(i),satisfaccion.getAt(i),observaciones.getAt(i),surveyPerInstance.id)
     }
-    redirect(action: "showSurveyPerInstance", params: [surveyPerInstance: surveyPerInstance])
+    redirect(action: "showSurveyPerInstance", params: [surveyPerInstanceId: surveyPerInstance.id])
   }
 
   def showSurveyPerInstance(){
-    [surveyPerInstance:params.surveyPerInstance]
+    def surveyPerInstance = SurveyPerInstance.get(params.surveyPerInstanceId)
+    [surveyPerInstance:surveyPerInstance]
   }
     
 }

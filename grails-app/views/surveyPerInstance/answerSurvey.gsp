@@ -27,7 +27,8 @@
           <hr>
         </g:each>
 
-        <g:hiddenField name="surveyPerInstance" value="${surveyPerInstance.id}" />
+        <g:hiddenField name="numPreguntas" value="${numPreguntas}" />
+        <g:hiddenField name="num" value="${surveyPerInstance.id}" />
 
         <div class="offset3 span6 offset3">
           <input class="btn btn-large btn-block btn-primary" type="submit" value="Enviar" />

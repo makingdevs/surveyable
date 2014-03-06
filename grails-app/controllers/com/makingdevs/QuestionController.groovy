@@ -1,24 +1,23 @@
 package com.makingdevs
 
+import com.makingdevs.*
+
 class QuestionController {
+
+  def questionService
 
   def index() { }
 
   def save(){
-    //refactorizar a servicio
     def pregunta
-    if(params.from&&params.to){
-    pregunta = new Question(description:params.description,
-                                questionType:params.questionType,
-                                satisfaccion:params.from.toInteger()..params.to.toInteger())
-    }else{
-    pregunta = new Question(params)
-  }
-    if(pregunta.save(flush:true)){
+
+    if(params.from&&params.to) pregunta = questionService.crearPreguntaConCalificacion(params)
+    else pregunta = questionService.crearPreguntaGenerica(params)
+
+    if(pregunta.id>0)
       redirect action:"show", id:pregunta.id
-    }else{
+    else
       render view:"index"
-    }
   }
 
   def show(){

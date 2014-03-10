@@ -14,6 +14,7 @@ class SurveyPerInstanceController {
   }
 
   def guardarSurvey(){
+
     def idPregunta = []
     def idPreguntas= []
     def respuestas=[]
@@ -49,6 +50,7 @@ class SurveyPerInstanceController {
     for (int i = 0; i < params.numPreguntas.toLong(); i++) {
       surveyPerInstanceService.addAnswer(idPregunta.getAt(i),respuestas.getAt(i),satisfaccion.getAt(i),observaciones.getAt(i),surveyPerInstance.id)
     }
+    surveyPerInstance.surveyPerInstanceStatus=SurveyPerInstanceStatus.CONTESTADO
     redirect(action: "showSurveyPerInstance", params: [surveyPerInstanceId: surveyPerInstance.id])
   }
 

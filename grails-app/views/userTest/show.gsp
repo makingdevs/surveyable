@@ -31,6 +31,9 @@
 					
 				</li>
 				</g:if>
+
+				<strong>Agrega un survey</strong>
+				<g:showSurveyForThisInstance instance="${userTest}"/>
 			
 			</ol>
 			<g:form url="[resource:userTest, action:'delete']" method="DELETE">

@@ -4,7 +4,8 @@ class SurveyPerInstanceService {
 
   def instanceSurvey(surveyId){
     def survey = Survey.get(surveyId)
-    def surveyPerInstance = new SurveyPerInstance(survey:survey)
+    def surveyPerInstance = new SurveyPerInstance(survey:survey,
+                                                  surveyPerInstanceStatus:SurveyPerInstanceStatus.SIN_CONTESTAR)
     survey.questions.each{question->
       surveyPerInstance.addToAnswerPerInstances(new AnswerPerInstance(question:question))
     }

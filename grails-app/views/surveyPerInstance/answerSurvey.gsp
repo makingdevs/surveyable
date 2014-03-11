@@ -4,6 +4,7 @@
 <head>
   <meta name="layout" content="bootstrap"/>
   <title>Answer Questionary</title>
+  <r:require modules="validation"/>
 </head>
 <body>
   <div class="container">

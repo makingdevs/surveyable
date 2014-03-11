@@ -11,12 +11,12 @@
       </g:each>
       <g:if test="${surveyLink?.surveyPerInstance?.survey?.id==survey.id}">
         <g:if test="${surveyLink?.surveyPerInstance?.surveyPerInstanceStatus==SurveyPerInstanceStatus.CONTESTADO}">
-          <g:link class="btn-small btn-primary" controller="evaluate" action="evaluateQuestionary" params="[surveyPerInstance:surveyLink?.surveyPerInstance?.id,surveyPerInstanceLink:surveyLink?.id,url:request.forwardURI]">
+          <g:link class="btn-small btn-primary" controller="surveyPerInstance" action="showSurveyPerInstance" params="[surveyPerInstanceId:surveyLink?.surveyPerInstance?.id,url:request.forwardURI]">
           <i class='icon-search icon-white'></i> Ver
           </g:link>
         </g:if>
         <g:else>
-          <g:link class="btn-small btn-primary" controller="survey" action="answerQuestionary" params="[id:surveyLink.surveyPerInstance.id,idQL:surveyLink.id,url:request.forwardURI]">
+          <g:link class="btn-small btn-primary" controller="surveyPerInstance" action="answerSurvey" params="[id:surveyLink.surveyPerInstance.id,url:request.forwardURI]">
           <i class='icon-pencil icon-white'></i> Contestar
           </g:link>
         </g:else>

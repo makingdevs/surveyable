@@ -26,7 +26,7 @@
           </g:elseif>
           <hr>
         </g:each>
-
+        <g:hiddenField name="url" value="${url}"/>
         <g:hiddenField name="numPreguntas" value="${numPreguntas}" />
         <g:hiddenField name="num" value="${surveyPerInstance.id}" />
 

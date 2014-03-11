@@ -5,12 +5,13 @@ import com.makingdevs.*
 class SurveyPerInstanceController {
 
   def surveyPerInstanceService
+  def surveyPerInstanceLinkService
 
   def answerSurvey(){
-    def survey=Survey.get(params.id)
-    def surveyPerInstance=surveyPerInstanceService.instanceSurvey(survey.id)
+    def surveyPerInstance=SurveyPerInstance.get(params.id)
     [surveyPerInstance:surveyPerInstance,
-    numPreguntas:surveyPerInstance.answerPerInstances.size()]
+    numPreguntas:surveyPerInstance.survey.questions.size(),
+    url:params.url]
   }
 
   def guardarSurvey(){
@@ -51,12 +52,21 @@ class SurveyPerInstanceController {
       surveyPerInstanceService.addAnswer(idPregunta.getAt(i),respuestas.getAt(i),satisfaccion.getAt(i),observaciones.getAt(i),surveyPerInstance.id)
     }
     surveyPerInstance.surveyPerInstanceStatus=SurveyPerInstanceStatus.CONTESTADO
-    redirect(action: "showSurveyPerInstance", params: [surveyPerInstanceId: surveyPerInstance.id])
+    redirect(action: "showSurveyPerInstance", params: [surveyPerInstanceId: surveyPerInstance.id,url:params.url])
   }
 
   def showSurveyPerInstance(){
     def surveyPerInstance = SurveyPerInstance.get(params.surveyPerInstanceId)
-    [surveyPerInstance:surveyPerInstance]
+    [surveyPerInstance:surveyPerInstance,
+    url:params.url]
+  }
+
+  def agregar(){
+    def clazzIntance = Class.forName(params.clazz).newInstance()
+    def instance = clazzIntance.get(params.instanceId)
+    def surveyPerInstanceLink=surveyPerInstanceLinkService.createSurveyPerInstance(instance,params.surveyId.toLong())
+    def url=params.url-grailsApplication.metadata.'app.name'-'/'
+    redirect(url:url)
   }
     
 }

@@ -43,9 +43,8 @@
           </dl>
         </g:each>
         <br><br>
-        <div class="offset3 span6 offset3">
-          <input class="btn btn-large btn-block btn-success" type="submit" value="Regresar" />
-        </div>
+          <a class="btn btn-success" href="${url}"><i class="icon-arrow-left icon-white"></i> Regresar</a>
+        
       </div>
     </div>
   </div>

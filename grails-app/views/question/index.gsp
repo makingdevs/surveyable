@@ -28,7 +28,9 @@
   <script>
   $( "#questionType" ).change(function() {
     if($("#questionType option:selected").text()=="CON_CALIFICACION"){
-      $( "<br><label>Rango de Calificacion</label><input type='text' name='from'><input type='text' name='to'><br>" ).appendTo( '#satisfaccion');
+      $( "<div class='agregado'><br><label>Rango de Calificacion</label><input class='input-mini' type='text' name='from' required>&nbsp;a&nbsp;<input class='input-mini' type='text' name='to' required><br></div>" ).appendTo( '#satisfaccion');
+    }else{
+      $( ".agregado" ).remove();
     }
   });
   </script>

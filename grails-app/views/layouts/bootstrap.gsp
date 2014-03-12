@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Questionable</title>
+  <title>Survey</title>
   <r:require module="estilos"/>
   <g:layoutHead/>
   <r:layoutResources />

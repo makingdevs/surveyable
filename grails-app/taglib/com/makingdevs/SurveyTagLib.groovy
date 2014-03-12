@@ -12,4 +12,14 @@ class SurveyTagLib {
             instance:attrs.instance,
             surveyLinks:surveyLinks], plugin:"surveyable")
   }
+
+  def showSurveyForAnswer = { attrs, body ->
+    def surveyLinks = SurveyPerInstanceLink
+      .findAllWhere(type:attrs.instance.class.getSimpleName(),
+      surveyPerInstanceRef:attrs.instance.id)
+    out << render(template:"/surveyPerInstance/surveyForAnswer", 
+      model:[instance:attrs.instance,
+            surveyLinks:surveyLinks], plugin:"surveyable")
+    println surveyLinks
+  }
 }

@@ -20,6 +20,5 @@ class SurveyTagLib {
     out << render(template:"/surveyPerInstance/surveyForAnswer", 
       model:[instance:attrs.instance,
             surveyLinks:surveyLinks], plugin:"surveyable")
-    println surveyLinks
   }
 }

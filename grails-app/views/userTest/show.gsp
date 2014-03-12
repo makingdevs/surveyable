@@ -34,6 +34,9 @@
 
 				<strong>Agrega un survey</strong>
 				<g:showSurveyForThisInstance instance="${userTest}"/>
+
+				<strong>Sus survey</strong>
+				<g:showSurveyForAnswer instance="${userTest}"/>
 			
 			</ol>
 			<g:form url="[resource:userTest, action:'delete']" method="DELETE">

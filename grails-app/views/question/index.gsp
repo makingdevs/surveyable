@@ -4,7 +4,7 @@
 <head>
   <meta name="layout" content="bootstrap"/>
   <title>Create question</title>
-  <g:javascript library="jquery" plugin="jquery"/>
+  <r:require module="jquery"/>
 </head>
 <body>
   <div class="container">
@@ -25,7 +25,7 @@
       </g:form>
     </div>
   </div>
-  <script>
+  <r:script>
   $( "#questionType" ).change(function() {
     if($("#questionType option:selected").text()=="CON_CALIFICACION"){
       $( "<div class='agregado'><br><label>Rango de Calificacion</label><input class='input-mini' type='text' name='from' required>&nbsp;a&nbsp;<input class='input-mini' type='text' name='to' required><br></div>" ).appendTo( '#satisfaccion');
@@ -33,6 +33,6 @@
       $( ".agregado" ).remove();
     }
   });
-  </script>
+  </r:script>
 </body>
 </html>

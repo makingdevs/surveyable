@@ -12,7 +12,7 @@
       <div class="span6">
           <g:form name="answer1Form" action="agregar">
             <label>¿Cual es la respuesta?:</label>
-            <textarea class="field span12" rows="4" name="description"></textarea>
+            <textarea class="field span12" rows="4" name="description" required></textarea>
             <input type="hidden" value="${question.id}" name="question" />
             <br>
             <input class="btn btn-primary" type="submit" value="Enviar" />

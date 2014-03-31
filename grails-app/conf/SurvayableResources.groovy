@@ -14,7 +14,7 @@ modules = {
   }
 
   jquery{
-  resource url:'js/jquery-2.1.0.min.js'
+  resource url:'js/jquery-2.0.0.min.js'
   }
 
 }

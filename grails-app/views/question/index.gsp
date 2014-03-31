@@ -13,7 +13,7 @@
       <g:form name="questionForm" action="save">
         <div class="span6">
           <label>Description</label>
-          <textarea class="field span12" rows="4" name="description"></textarea>
+          <textarea class="field span12" rows="4" name="description" required></textarea>
         </div>
         <div class="span6" id="satisfaccion">
           <label>QuestionType</label>

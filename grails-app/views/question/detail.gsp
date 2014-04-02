@@ -29,6 +29,10 @@
           </g:if>
         </dl>
       </div>
+      <div class="span12">
+        <g:link class="btn btn-info"  action="index">Crear otra Pregunta</g:link>
+        <g:link class="btn btn-info"  action="list">Todas las Preguntas</g:link>
+      </div>
     </div>
   </div>
 </body>

@@ -24,8 +24,8 @@
         <g:if test="${question.questionType == QuestionType.SIN_CALIFICACION || question.questionType == QuestionType.CON_CALIFICACION}">
           <g:link class="btn btn-primary" controller="answer" action="create" id="${question.id}">Agregar respuestas</g:link>
         </g:if>
-        
-        <g:link class="btn btn-primary"  action="index">Crear otra Pregunta</g:link>
+        <g:link class="btn btn-info"  action="index">Crear otra Pregunta</g:link>
+        <g:link class="btn btn-info"  action="list">Todas las Perguntas</g:link>
       </div>
     </div>
   </div>

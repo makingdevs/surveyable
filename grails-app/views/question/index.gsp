@@ -10,19 +10,24 @@
   <div class="container">
     <h1>Captura pregunta</h1>
     <div class="row-fluid">
-      <g:form name="questionForm" action="save">
-        <div class="span6">
-          <label>Description</label>
-          <textarea class="field span12" rows="4" name="description" required></textarea>
-        </div>
-        <div class="span6" id="satisfaccion">
-          <label>QuestionType</label>
-          <g:select name="questionType" from="${QuestionType.values()}"/>
-        </div>
-        <div class="span12">
-          <input class="btn btn-primary" type="submit" value="Enviar" />
-        </div>
-      </g:form>
+      <div class="span12">
+        <g:form class="form-horizontal" name="questionForm" action="save">
+          <div class="control-group span6">
+            <label>Description</label>
+            <textarea class="span12" rows="4" name="description" style="overflow:auto; resize:none;" required></textarea>
+          </div>
+          <div class="control-group span6" id="satisfaccion">
+            <label>QuestionType</label>
+            <g:select name="questionType" from="${QuestionType.values()}"/>
+          </div>
+          <div class="control-group span6">
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+          </div>
+        </g:form>
+      </div>
+      <div class="span12">
+        <g:link class="btn btn-info" controller="question" action="list" >Todas las preguntas</g:link>
+      </div>
     </div>
   </div>
   <r:script>

@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Survey</title>
-  <r:require module="estilos"/>
+  <r:require module="${session.surveyableTheme ?: 'estilos'}"/>
   <g:layoutHead/>
   <r:layoutResources />
 </head>

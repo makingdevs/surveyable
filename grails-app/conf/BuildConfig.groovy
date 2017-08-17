@@ -2,9 +2,9 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 
-grails.project.repos.md.url = "http://makingdevs.com:8081/nexus/content/repositories/thirdparty"
-grails.project.repos.md.username = "deployment"
-grails.project.repos.md.password = "d3pl0ym3nt"
+grails.project.repos.md.url = "http://ci.makingdevs.com:8081/repository/md/"
+grails.project.repos.md.username = "admin"
+grails.project.repos.md.password = "m4k1ngd3vs"
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
